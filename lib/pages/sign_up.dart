@@ -1,3 +1,4 @@
+import 'package:actualapp/pages/edit_profile.dart';
 import 'package:actualapp/pages/sign_in.dart';
 import 'package:actualapp/pages/termscondition.dart';
 import 'package:flutter/material.dart';
@@ -314,7 +315,18 @@ class _SignUpState extends State<SignUp> {
                           child: const Text('SIGN UP',
                               style: TextStyle(color: Colors.white)),
                           controller: _btnController,
-                          onPressed: () {}
+                          onPressed: () {
+                            Navigator.push(
+                                    context,
+                                    PageTransition(
+                                      type: PageTransitionType.rightToLeft,
+                                      duration:
+                                          const Duration(milliseconds: 200),
+                                      reverseDuration:
+                                          const Duration(milliseconds: 200),
+                                      child: const EditMyProfWidget(),
+                                    ));
+                          }
                           // onPressed: () async {
                           // try {
                           // _btnController.start();
